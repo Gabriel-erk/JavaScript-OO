@@ -12,8 +12,13 @@
     <script src="formas.js"></script>
     <script src="quadrado.js"></script>
     <script>
-        // chamando o construtor de quadrado, e passando o parametro (para "lado")
-        const forma = new Quadrado(10);
+        /* curiosidade: new Quadrado(10), parametro sera passado para constructor, em circunstancias onde sera passado a outros metodos, ex: calculaArea, se este metodo nao existir em quadrado, ele ira procurar a mesma classe na classe pai Forma */
+        // chamando o construtor de quadrado, e passando 10 como parametro para constructor (que sera atribuido para "lado")
+        // const forma = new Quadrado(10)
+        // const forma = new Forma("Forma Abstrata");
+        // const forma = new Forma()
+        
+        const forma = new Quadrado(15);
         document.getElementById('btnImprimir').addEventListener('click', function () {
             forma.imprimeForma();
         });
