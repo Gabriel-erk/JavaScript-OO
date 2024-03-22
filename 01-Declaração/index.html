@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Declaração</title>
 </head>
 <body>
-    
+        <button id="btnImprimir">Imprimir Forma</button>
+        <script src="formas.js"></script>
+        <script>
+            const forma = new Forma();
+            document.getElementById('btnImprimir').addEventListener('click', function(){
+                forma.imprimeForma();
+            });
+        </script>
 </body>
 </html>
