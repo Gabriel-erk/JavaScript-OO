@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reutilização de Códigos</title>
+</head>
+
+<body>
+    <button id="btnImprimir">Imprimir Forma</button>
+    <script src="formas.js"></script>
+    <!-- a classe pai de quadrado-colorido é quadrado, entao ele precisa estar aqui no html -->
+    <script src="quadrado.js"></script>
+    <script src="quadrado-colorido.js"></script>
+    <script>
+        /* curiosidade: new Quadrado(10), parametro sera passado para constructor, em circunstancias onde sera passado a outros metodos, ex: calculaArea, se este metodo nao existir em quadrado, ele ira procurar a mesma classe na classe pai Forma */
+        // chamando o construtor de quadrado, e passando 10 como parametro para constructor (que sera atribuido para "lado")
+        // const forma = new Quadrado(10)
+        // const forma = new Forma("Forma Abstrata");
+        // const forma = new Forma()
+        
+        const forma = new QuadradoColorido(20, "Azul");
+        document.getElementById('btnImprimir').addEventListener('click', function () {
+            forma.imprimeForma();
+        });
+    </script>
+</body>
+
+</html>

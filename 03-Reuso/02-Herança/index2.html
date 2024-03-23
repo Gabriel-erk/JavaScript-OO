@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reutilização de Códigos</title>
+</head>
+
+<body>
+    <button id="btnImprimir">Imprimir Forma</button>
+    <script src="formas.js"></script> 
+    <script src="retangulo.js"></script>
+    
+    <script>
+        
+        const forma = new Retangulo(20, 10);
+        document.getElementById('btnImprimir').addEventListener('click', function () {
+            forma.imprimeForma();
+        });
+    </script>
+</body>
+
+</html>
